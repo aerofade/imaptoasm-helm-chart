@@ -1,0 +1,12 @@
+# Default values for my-chart.
+config:
+  imapServer: ""
+  emailAccount: ""
+  emailFolder: ""
+  password: ""
+  alServer: ""
+  alUser: ""
+  alApiKey: ""
+  sleep: 5
+  cfCid: ""
+  cfCsecret: ""

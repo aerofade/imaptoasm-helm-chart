@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: imaptoasm-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: imaptoasm
+  template:
+    metadata:
+      labels:
+        app: imaptoasm
+    spec:
+      containers:
+        - name: imaptoasm-container
+          image: aerofade/imaptoasm:latest
+          command: ["/usr/bin/env", "python3", "/app/imaptoasm.py"]
+            volumeMounts:
+            - mountPath: "/etc/imaptoasm/config"
+            name: imaptoasm-config
+            readOnly: true
+        volumes:
+            - name:  imaptoasm-config
+            secret:
+                secretName: imaptoasm-config
