@@ -16,11 +16,11 @@ spec:
         - name: imaptoasm
           image: aerofade/imaptoasm:latest
           command: ["/usr/bin/env", "python3", "/app/imaptoasm.py"]
-            volumeMounts:
-            - mountPath: "/etc/imaptoasm/config"
+          volumeMounts:
+          - mountPath: "/etc/imaptoasm/config"
             name: imaptoasm-config
             readOnly: true
-        volumes:
-            - name:  imaptoasm-config
-            secret:
-                secretName: imaptoasm-config
+      volumes:
+        - name:  imaptoasm-config
+          secret:
+            secretName: imaptoasm-config
