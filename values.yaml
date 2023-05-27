@@ -1,12 +1,12 @@
 # Default values for my-chart.
 config:
-  imapServer: ""
+  imapServer: "imap.gmail.com"
   emailAccount: ""
-  emailFolder: ""
+  emailFolder: "Inbox"
   password: ""
   alServer: ""
   alUser: ""
   alApiKey: ""
-  sleep: 5
+  sleep: 300
   cfCid: ""
   cfCsecret: ""
