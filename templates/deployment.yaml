@@ -17,7 +17,7 @@ spec:
           image: aerofade/imaptoasm:latest
           command: ["/usr/bin/env", "python3", "/app/imaptoasm.py"]
           volumeMounts:
-          - mountPath: "/etc/imaptoasm/config"
+          - mountPath: "/app/config"
             name: imaptoasm-config
             readOnly: true
       volumes:
