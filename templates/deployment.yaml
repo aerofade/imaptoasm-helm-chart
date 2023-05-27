@@ -13,7 +13,7 @@ spec:
         app: imaptoasm
     spec:
       containers:
-        - name: imaptoasm-container
+        - name: imaptoasm
           image: aerofade/imaptoasm:latest
           command: ["/usr/bin/env", "python3", "/app/imaptoasm.py"]
             volumeMounts:
